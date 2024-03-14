@@ -1,0 +1,35 @@
+@TasksFollowupAPI_HostAddress = https://4tv76xgc-5215.inc1.devtunnels.ms
+
+### Create a new subject with tasks and attachments
+POST {{TasksFollowupAPI_HostAddress}}/api/subjects
+Content-Type: application/json
+
+{
+  "title": "Sample Subject",
+  "createdOn": "2024-03-14T00:00:00",
+  "from": "example@example.com",
+  "to": "recipient@example.com",
+  "cc": "ccrecipient@example.com",
+  "body": "This is a sample subject body.",
+  "tasks": [
+    {
+      "title": "Task 1",
+      "assignedTo": "user1@example.com"
+    },
+    {
+      "title": "Task 2",
+      "assignedTo": "user2@example.com"
+    }
+  ],
+  "attachments": [
+    {
+      "attachmentName": "SampleAttachment1.pdf",
+      "content": "SGVsbG8sIFdvcmxkIQ==" 
+    },
+    {
+      "attachmentName": "SampleAttachment2.pdf",
+      "content": "SGVsbG8sIEFnYWluIQ==" 
+    }
+  ]
+}
+
